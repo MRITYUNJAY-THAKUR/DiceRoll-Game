@@ -1,0 +1,15 @@
+import random
+def dicegame():
+    roller=input("Roll the dice? (y/n): ")
+    if roller=="y"or roller=="Y":
+        num1=random.randrange(1,7)
+        num2=random.randrange(1,7)
+        print((num1,num2))
+        return dicegame()
+    elif roller=="n" or roller =="N":
+        print("Thank you for playing!")
+        
+    else:
+        print("Invalid entry!")
+        return dicegame()
+dicegame()
